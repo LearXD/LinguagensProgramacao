@@ -1,12 +1,15 @@
 #include <stdio.h>
 
-void main() {
-    float seconds;
+void getClock(int seconds, int *clock) {
+    clock[0] = (seconds / 60 / 24);
+    clock[1] = (seconds - (clock[0] * 60 * 24)) / 60;
+    clock[2] = seconds - (clock[1] * 60);
+}
 
-    printf("Digite um numero em segundos:\n");
-    scanf("%f", &seconds);
-
-    printf("%.1f segundos sao:\n", seconds);
-    printf("%.1f horas:\n", ((seconds / 60) / 24));
-    printf("%.1f minutos:\n", (seconds / 60));
+void main () {
+    int seconds, clock[3];
+    printf("Digite os segundos:\n");
+    scanf("%d", &seconds);
+    getClock(seconds, &clock);
+    printf("Horario: [%d:%d:%d]", clock[0], clock[1], clock[2]);
 }
