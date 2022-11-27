@@ -18,8 +18,11 @@ void main () {
     int hasSpaced = 1;
 
     for (int i = 0; string[i] != '\0'; i++) {
-        if(!hasSpaced && isSpace(string[i])) {
-            printf("\n");
+        if(isSpace(string[i])) {
+            if(!hasSpaced) {
+                hasSpaced = 1;
+                printf("\n");
+            }
             continue;
         }
 

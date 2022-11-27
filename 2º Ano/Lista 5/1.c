@@ -17,12 +17,12 @@ void main () {
     for (int i=0; string[i] != '\0'; i++) {
         for(int n = 0; n <= 4; n++) {
             if(string[i] == vowels[n]) {
-                vowels_count[i]++;
+                vowels_count[n]++;
             }
         }
     }
 
     for(int n = 0; n <= 4; n++) {
-        printf("\n* Existem %d vogais %c", vowels_count[n], vowels[n]);
+        printf("\n* Existem %d vogais \"%c\"...", vowels_count[n], vowels[n]);
     }
 }

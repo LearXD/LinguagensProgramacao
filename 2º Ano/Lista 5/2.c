@@ -19,7 +19,7 @@ void main () {
     }
 
     (similarity) ?
-        printf("Os dois textos são iguais!") :
-        printf("Os dois textos são diferentes!");
+        printf("Os dois textos sao iguais!") :
+        printf("Os dois textos sao diferentes!");
 
 }
